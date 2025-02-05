@@ -1,0 +1,32 @@
+class university {
+    static String universityname = "upes";
+    String studentname;
+    String studentage;
+
+
+    university(String studentname, String studentage) {
+        this.studentname = studentname;
+        this.studentage = studentage;
+    }
+
+
+    static void displayuniversityname() {
+        System.out.println("University name: " + universityname);
+    }
+    void displayStudentInfo() {
+        System.out.println("Student Name: " + studentname);
+        System.out.println("Student Age: " + studentage);
+    }
+
+    public static void main (String[] args) {
+        university.displayuniversityname();
+
+        university student1 = new university ("naman","20");
+        university student2 = new university ("arnav", "21");
+        university student3 = new university ("kinjal","22");
+
+        student1.displayStudentInfo();
+        student2.displayStudentInfo();
+        student3.displayStudentInfo();
+    }
+}
