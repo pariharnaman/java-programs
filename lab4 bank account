@@ -1,0 +1,30 @@
+class BankAccount {
+    private double Balance;
+
+    public void deposit(double amount){
+        if(amount > 0){
+            Balance = Balance + amount;
+            System.out.println("Deposited : " + amount);
+        }
+    }
+    public void withdraw(double amount){
+        if (amount >0 && Balance <= amount){
+            Balance = Balance - amount;
+            System.out.println("Withdrawn : " + amount);
+        }
+    }
+    void checkbalance(){
+        System.out.println("Balance : " + Balance);
+    }
+
+}
+public class main {
+    public static void main (String[] args) {
+        BankAccount account = new BankAccount();
+
+        // Accessing public method
+        account.deposit(1000);
+        account.checkBalance();
+        
+    }
+}
